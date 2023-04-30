@@ -68,6 +68,7 @@ class Database
 
     public function __destruct()
     {
+        mysqli_stmt_close($this->stmt);
         mysqli_close($this->conn);
     }
 }
